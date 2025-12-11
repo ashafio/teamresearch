@@ -1,0 +1,26 @@
+--- Statistical Analysis Results ---
+Research Question: Difference in mean rating (Photo vs Text)
+
+1. Group Statistics:
+# A tibble: 2 × 4
+  ReviewType          Mean_Rating SD_Rating Count
+  <chr>                     <dbl>     <dbl> <int>
+1 Photographic Review        3.86      1.08  1983
+2 Text-Only Review           3.54      1.56  7978
+
+2. T-Test Results:
+
+	Welch Two Sample t-test
+
+data:  Rating by ReviewType
+t = 10.981, df = 4307.6, p-value < 2.2e-16
+alternative hypothesis: true difference in means between group Photographic Review and group Text-Only Review is not equal to 0
+95 percent confidence interval:
+ 0.2690194 0.3859601
+sample estimates:
+mean in group Photographic Review    mean in group Text-Only Review 
+                         3.863338                          3.535849 
+
+
+Result: Reject the Null Hypothesis (H0).
+Conclusion: There is a statistically significant difference in mean ratings between photographic and text-only reviews.
