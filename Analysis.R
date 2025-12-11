@@ -1,7 +1,7 @@
 # ============================================================================
 # 7COM1079-0901-2025 - Team Research and Development Project
 # Analysis Script: Service Mentions and Star Ratings
-# Prepared by: Precious Tenebe [Student-PECS]
+# Prepared by: Abdul Rehman 
 # Dataset: Restaurant Reviews
 # ============================================================================
 
