@@ -1,26 +1,136 @@
---- Statistical Analysis Results ---
-Research Question: Difference in mean rating (Photo vs Text)
+=== DESCRIPTIVE STATISTICS ===
+Overall mean rating: 3.601 
 
-1. Group Statistics:
+Rating by Service Mention:
+# A tibble: 2 × 6
+  mentions_service     n mean_rating sd_rating median_rating five_star_pct
+  <lgl>            <int>       <dbl>     <dbl>         <dbl>         <dbl>
+1 FALSE             5709        3.48      1.52             4          35.6
+2 TRUE              4252        3.77      1.41             4          42.4
+
+Rating by Ambience Mention (exploratory):
 # A tibble: 2 × 4
-  ReviewType          Mean_Rating SD_Rating Count
-  <chr>                     <dbl>     <dbl> <int>
-1 Photographic Review        3.86      1.08  1983
-2 Text-Only Review           3.54      1.56  7978
+  mentions_ambience     n mean_rating sd_rating
+  <lgl>             <int>       <dbl>     <dbl>
+1 FALSE              7076        3.44      1.60
+2 TRUE               2885        3.99      1.06
 
-2. T-Test Results:
+=== CREATING VISUALISATIONS ===
+Figure 1 saved: mean_rating_by_service.png
+Figure 2 saved: histogram_ratings_overlay.png
+
+Contingency Table: Service Mention × 5-Star Rating
+               Five_Star
+Service_Mention FALSE TRUE
+          FALSE  3678 2031
+          TRUE   2451 1801
+
+Proportions (%) by row:
+               Five_Star
+Service_Mention FALSE  TRUE
+          FALSE 64.42 35.58
+          TRUE  57.64 42.36
+
+Contingency table saved: contingency_table.csv
+
+=== STATISTICAL HYPOTHESIS TESTING ===
+
+Research Question:
+Do reviews that mention staff/service receive higher star ratings
+than reviews that do not?
+
+Hypothesis 1 (Means):
+H0: μ(service mention) = μ(no service mention)
+H1: μ(service mention) ≠ μ(no service mention)
+Test: Welch's two-sample t-test
+Significance level: α = 0.05
+
+-------------------------------------------
 
 	Welch Two Sample t-test
 
-data:  Rating by ReviewType
-t = 10.981, df = 4307.6, p-value < 2.2e-16
-alternative hypothesis: true difference in means between group Photographic Review and group Text-Only Review is not equal to 0
+data:  Rating_num by mentions_service
+t = -9.6781, df = 9495.7, p-value < 2.2e-16
+alternative hypothesis: true difference in means between group FALSE and group TRUE is not equal to 0
 95 percent confidence interval:
- 0.2690194 0.3859601
+ -0.3443644 -0.2283635
 sample estimates:
-mean in group Photographic Review    mean in group Text-Only Review 
-                         3.863338                          3.535849 
+mean in group FALSE  mean in group TRUE 
+           3.478805            3.765169 
 
 
-Result: Reject the Null Hypothesis (H0).
-Conclusion: There is a statistically significant difference in mean ratings between photographic and text-only reviews.
+Effect Size (Cohen's d): 0.194 
+Magnitude: 1 
+
+Decision on H0 (means): REJECT H0 (p < 0.05)
+Conclusion: Service-mention reviews have significantly different ratings.
+Mean difference: 0.286 stars
+
+Hypothesis 2 (Proportions):
+H0: p(5-star | service) = p(5-star | no service)
+H1: p(5-star | service) ≠ p(5-star | no service)
+Test: Pearson's chi-squared test
+Significance level: α = 0.05
+
+-------------------------------------------
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  contingency_table
+X-squared = 47.056, df = 1, p-value = 6.899e-12
+
+
+5-star proportion (service mention): 42.36 %
+5-star proportion (no service mention): 35.58 %
+Difference: 6.78 percentage points
+
+Decision on H0 (proportions): REJECT H0 (p < 0.05)
+Conclusion: 5-star proportion is significantly higher when service is mentioned.
+
+=== EXPLORATORY ANALYSIS: AMBIENCE MENTION ===
+
+Ambience mention t-test:
+Mean (ambience mentioned): 3.991 
+Mean (no ambience mention): 3.442 
+p-value: <0.001 
+Result: Ambience mentions also associate with significantly higher ratings.
+
+=== RESULTS SUMMARY ===
+-------------------------------------------
+1. MEANS TEST (Welch's t-test):
+   Service-mention reviews: mean = 3.765 
+   No service mention: mean = 3.479 
+   t-statistic: -9.68 
+   p-value: <0.001 
+   Effect size (Cohen's d): 0.194 
+   Decision: REJECT H0
+
+2. PROPORTIONS TEST (Chi-squared):
+   5-star % (service): 42.36 %
+   5-star % (no service): 35.58 %
+   χ² statistic: 47.06 
+   p-value: <0.001 
+   Decision: REJECT H0
+
+3. EXPLORATORY (Ambience):
+   Mean (ambience): 3.991 
+   Mean (no ambience): 3.442 
+   p-value: <0.001 
+
+=== INTERPRETATION ===
+Service-mention reviews receive significantly higher star ratings.
+Both mean ratings and 5-star proportions are higher when service is mentioned.
+Ambience mentions show a similar positive association (exploratory finding).
+
+=== MANAGERIAL IMPLICATIONS ===
+Restaurants should prioritize service quality training and staffing to
+protect their online rating profiles. Service mentions in reviews are
+associated with higher ratings, suggesting that attentive, courteous staff
+positively influence customer satisfaction and rating outcomes.
+
+=== ANALYSIS COMPLETE ===
+Generated files:
+  - mean_rating_by_service.png (Figure 1: Main plot)
+  - histogram_ratings_overlay.png (Figure 2: Histogram with normal curve)
+  - contingency_table.csv (Service × 5-star table)
+
