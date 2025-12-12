@@ -15,10 +15,6 @@ Rating by Ambience Mention (exploratory):
 1 FALSE              7076        3.44      1.60
 2 TRUE               2885        3.99      1.06
 
-=== CREATING VISUALISATIONS ===
-Figure 1 saved: mean_rating_by_service.png
-Figure 2 saved: histogram_ratings_overlay.png
-
 Contingency Table: Service Mention × 5-Star Rating
                Five_Star
 Service_Mention FALSE TRUE

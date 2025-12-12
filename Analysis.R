@@ -18,7 +18,7 @@ install_and_load <- function(package) {
     cat(paste0("\nInstalling missing package: ", package, "...\n"))
     lib_dir <- Sys.getenv("R_LIBS_USER")
     if (nchar(lib_dir) == 0) {
-       lib_dir <- file.path(Sys.getenv("USERPROFILE"), "Documents", "R", "win-library", paste0(R.version$major, ".", R.version$minor))
+      lib_dir <- file.path(Sys.getenv("USERPROFILE"), "Documents", "R", "win-library", paste0(R.version$major, ".", R.version$minor))
     }
     if (!dir.exists(lib_dir)) {
       dir.create(lib_dir, recursive = TRUE, showWarnings = FALSE)
@@ -58,22 +58,22 @@ df <- df %>%
   mutate(
     # Convert Rating to numeric (1-5 scale)
     Rating_num = suppressWarnings(as.numeric(Rating)),
-
+    
     # Parse date-time field
     dt = suppressWarnings(mdy_hm(Time, quiet = TRUE)),
     weekday = wday(dt, label = TRUE, abbr = FALSE),
-
+    
     # Create lowercase review text for keyword matching
     review_lower = tolower(coalesce(Review, '')),
-
+    
     # Binary flag: mentions service/staff keywords
     mentions_service = str_detect(review_lower,
-      "\\b(service|staff|waiter|server|served|serving|courteous|polite|friendly|hostess|manager|hospitality|attentive|prompt|slow|rude|behaviour|behavior)\\b"),
-
+                                  "\\b(service|staff|waiter|server|served|serving|courteous|polite|friendly|hostess|manager|hospitality|attentive|prompt|slow|rude|behaviour|behavior)\\b"),
+    
     # Binary flag: mentions ambience keywords (exploratory)
     mentions_ambience = str_detect(review_lower,
-      "\\b(ambience|ambiance|music|lighting|lights|decor|environment|atmosphere|vibe|seating)\\b"),
-
+                                   "\\b(ambience|ambiance|music|lighting|lights|decor|environment|atmosphere|vibe|seating)\\b"),
+    
     # Binary outcome: 5-star rating indicator
     five_star = Rating_num == 5
   ) %>%
@@ -123,6 +123,7 @@ summary_ambience <- df %>%
 cat("Rating by Ambience Mention (exploratory):\n")
 print(summary_ambience)
 cat("\n")
+sink(NULL)
 
 # ============================================================================
 # VISUALISATION 1: Mean Rating by Service Mention (Main Plot)
@@ -167,6 +168,8 @@ main_plot <- ggplot(plot_data, aes(x = service_label, y = mean_rating, fill = se
 # Save plot (outside sink)
 # We need to print to device, but sink captures stdout. 
 # Saving ggsave works fine.
+print(main_plot)
+
 ggsave("mean_rating_by_service.png", main_plot, width = 8, height = 6, dpi = 300)
 cat("Figure 1 saved: mean_rating_by_service.png\n")
 
@@ -192,7 +195,7 @@ histogram_plot <- ggplot(df, aes(x = Rating_num)) +
   labs(
     title = "Distribution of Restaurant Ratings",
     subtitle = sprintf("Histogram with Normal Overlay (μ = %.2f, σ = %.2f)",
-                      overall_mean, overall_sd),
+                       overall_mean, overall_sd),
     x = "Rating (1–5 stars)",
     y = "Density"
   ) +
@@ -202,9 +205,11 @@ histogram_plot <- ggplot(df, aes(x = Rating_num)) +
     plot.subtitle = element_text(size = 11),
     axis.title = element_text(size = 11)
   )
+print(histogram_plot)
 
 ggsave("histogram_ratings_overlay.png", histogram_plot, width = 8, height = 6, dpi = 300)
 cat("Figure 2 saved: histogram_ratings_overlay.png\n\n")
+sink("analysis_results.txt", append = TRUE)
 
 # ============================================================================
 # VISUALISATION 3: Contingency Table (Service × 5-Star)
@@ -389,5 +394,4 @@ cat("  - contingency_table.csv (Service × 5-star table)\n")
 cat("\n")
 
 sink() # Stop writing to file
-
 
