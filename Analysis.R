@@ -258,11 +258,11 @@ cat("H1: μ(service mention) ≠ μ(no service mention)\n")
 cat("Test: Welch's two-sample t-test\n")
 cat("Significance level: α = 0.05\n\n")
 
-# Perform Welch's t-test (does not assume equal variances)
+# Perform Student's t-test 
 t_test_result <- t.test(
   Rating_num ~ mentions_service,
   data = df,
-  var.equal = FALSE,
+  var.equal = TRUE,
   alternative = "two.sided"
 )
 
