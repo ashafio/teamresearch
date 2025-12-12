@@ -394,4 +394,5 @@ cat("  - contingency_table.csv (Service × 5-star table)\n")
 cat("\n")
 
 sink() # Stop writing to file
+git log --pretty=fuller > git_log_output.txt
 
