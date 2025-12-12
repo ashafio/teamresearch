@@ -1,21 +1,177 @@
-* d4e6b2c (HEAD -> main, origin/main, origin/HEAD) Final Report & plots  visualization
-* d99b238 Cleanup
-* 491b93d Git log update
-* 3dabf64 formatting artifacts
-* d73fe92 git log
-* 2092f34 Update analysis to investigate Service Mentions vs Ratings
-* 3870239 Result.md
-* 894409d fixes
-* d80ceed fixes
-* 075f253 Changes
-* 4f978c1 analysis result , photos
-* 98bbb66 Add Analysis.R to perform hypothesis testing and CODE_EXPLANATION.md to document the script
-* 1f71961 Testing successful push with Abdul's identity
-* 33df276 Add files via upload
-* afc966c dataset cleaned
-* d093fcc cleaned
-* 1932b94 4 plots
-* 616a7ff deleted
-* f84fd7d try
-* eec9980 dataset
-* 412291e testing
+commit f50f44884a1dc76f5acb2d7f79b6d429f18f0d03
+Author:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+AuthorDate: Fri Dec 12 09:21:08 2025 +0000
+Commit:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+CommitDate: Fri Dec 12 09:21:08 2025 +0000
+
+    Git log updated
+
+commit d4e6b2cd6105ea32a4f1feadcc3385e19100099f
+Author:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+AuthorDate: Fri Dec 12 09:17:50 2025 +0000
+Commit:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+CommitDate: Fri Dec 12 09:17:50 2025 +0000
+
+    Final Report & plots  visualization
+
+commit d99b238c6ecb519d61e33b9c0079d880fbfbec05
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 23:29:57 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 23:29:57 2025 +0500
+
+    Cleanup
+
+commit 491b93d42df1becec5d2de6c3e968071179bcf8b
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 23:23:16 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 23:23:16 2025 +0500
+
+    Git log update
+
+commit 3dabf64790b48e6dbefa099fc8f54a821054e9f9
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 23:22:14 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 23:22:14 2025 +0500
+
+    formatting artifacts
+
+commit d73fe92a716544051e3445289892f2fa9d17dad6
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 23:18:29 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 23:18:29 2025 +0500
+
+    git log
+
+commit 2092f3416b7192778aeeaa68376132d33249fbee
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 23:06:16 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 23:06:16 2025 +0500
+
+    Update analysis to investigate Service Mentions vs Ratings
+
+commit 38702390cf7430b6c7e65a2afc5397d15bf1ffb2
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 23:03:28 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 23:03:28 2025 +0500
+
+    Result.md
+
+commit 894409db392e1d3c02eeb61871a2af0dc40c8934
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 22:59:38 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 22:59:38 2025 +0500
+
+    fixes
+
+commit d80ceed9622d69ff0a773b713a90f60197d839c6
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 22:59:24 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 22:59:24 2025 +0500
+
+    fixes
+
+commit 075f25319f5e8c3124f7f4fe2f9705b3805b16a7
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 22:57:31 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 22:57:31 2025 +0500
+
+    Changes
+
+commit 4f978c1ab6ae3e297a9825de7f8398895b747c81
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 22:42:22 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 22:42:22 2025 +0500
+
+    analysis result , photos
+
+commit 98bbb663e1c5e411a28a14d971d6cb63841ad826
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 22:37:01 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 22:37:01 2025 +0500
+
+    Add Analysis.R to perform hypothesis testing and CODE_EXPLANATION.md to document the script
+
+commit 1f719612194ae8ac0ef46ac7ec2bcedc53a073ef
+Author:     Abdul Rehman <ar25adh@hertz.ac.uk>
+AuthorDate: Thu Dec 11 21:54:57 2025 +0500
+Commit:     Abdul Rehman <ar25adh@hertz.ac.uk>
+CommitDate: Thu Dec 11 21:54:57 2025 +0500
+
+    Testing successful push with Abdul's identity
+
+commit 33df276595951ee8dccd84e36a89967f58037eb3
+Author:     PTenebe <pt24aaw@herts.ac.uk>
+AuthorDate: Thu Dec 11 12:41:43 2025 +0000
+Commit:     GitHub <noreply@github.com>
+CommitDate: Thu Dec 11 12:41:43 2025 +0000
+
+    Add files via upload
+    
+    Questions 1 and 2 Done
+
+commit afc966c2f69c1e2425324de71be79d5054e6e3a3
+Author:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+AuthorDate: Wed Dec 10 15:51:32 2025 +0000
+Commit:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+CommitDate: Wed Dec 10 15:51:32 2025 +0000
+
+    dataset cleaned
+
+commit d093fcc34e2bdf90f1327d5e0bb150edb7b5ffc7
+Author:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+AuthorDate: Wed Dec 10 15:39:00 2025 +0000
+Commit:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+CommitDate: Wed Dec 10 15:39:00 2025 +0000
+
+    cleaned
+
+commit 1932b9419fe93c99c83668a893a0ca87f26a4928
+Author:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+AuthorDate: Wed Dec 10 15:32:52 2025 +0000
+Commit:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+CommitDate: Wed Dec 10 15:32:52 2025 +0000
+
+    4 plots
+
+commit 616a7ff5debfebff011e54bc31a333a93ad1dcac
+Author:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+AuthorDate: Wed Dec 10 14:27:54 2025 +0000
+Commit:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+CommitDate: Wed Dec 10 14:27:54 2025 +0000
+
+    deleted
+
+commit f84fd7db8c948c42f9f13550671b594293fd3510
+Author:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+AuthorDate: Wed Dec 10 11:30:53 2025 +0000
+Commit:     Abid Rahman Shafi <abidurrahman780@gmail.com>
+CommitDate: Wed Dec 10 11:30:53 2025 +0000
+
+    try
+
+commit eec99800f750bf24f1e97a2f720e43457984662d
+Author:     Syed Qasim <ss25aht@herts.ac.uk>
+AuthorDate: Fri Nov 21 16:45:36 2025 +0000
+Commit:     Syed Qasim <ss25aht@herts.ac.uk>
+CommitDate: Fri Nov 21 16:45:36 2025 +0000
+
+    dataset
+
+commit 412291e6b7014ddedf4ec27bbe7ebca8abeec3ce
+Author:     Syed Qasim <ss25aht@herts.ac.uk>
+AuthorDate: Fri Nov 21 16:32:40 2025 +0000
+Commit:     Syed Qasim <ss25aht@herts.ac.uk>
+CommitDate: Fri Nov 21 16:32:40 2025 +0000
+
+    testing
