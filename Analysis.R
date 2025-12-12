@@ -1,7 +1,6 @@
 # ============================================================================
 # 7COM1079-0901-2025 - Team Research and Development Project
 # Analysis Script: Service Mentions and Star Ratings
-# Prepared by: Abdul Rehman 
 # Dataset: Restaurant Reviews
 # ============================================================================
 
@@ -394,5 +393,4 @@ cat("  - contingency_table.csv (Service × 5-star table)\n")
 cat("\n")
 
 sink() # Stop writing to file
-git log --pretty=fuller > git_log_output.txt
 

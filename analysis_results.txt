@@ -36,3 +36,5 @@ Do reviews that mention staff/service receive higher star ratings
 than reviews that do not?
 
 Hypothesis 1 (Means):
+=== STATISTICAL HYPOTHESIS TESTING ===
+
